@@ -1,66 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script src="blender.js"></script>
-    <style>
-        #output {
-            width: 300px;
-            height: 150px;
-            border: 1px solid black;
-            position: relative;
-        }
-        /* body{
-            font-family: Arial;
-        } */
-         
-         /* Authur: A. silinga 224108331 */
-        
-
-        
-    </style>
+    <script src="cars.js"></script>
+    <link href="cars.css" rel="stylesheet">
 </head>
 <body>
+     /* Authur: A. silinga 224108331 */
 
-<h1>Mr. Surname Blender</h1>
+<h1>Vintage Cars</h1>
+<p>Guess which car belongs to which make?</p>
 
-<div>
-    <span>Surname:</span>
-    <input id="surname" type="text">
+<div id="car-info">
+    <h2><span id="car-name"></span> (<span id="car-type"></span>)</h2>
+    <img class="hidden" id="car-img" src="a-car.png" alt="">
+      <img  src="a-car.png" alt="car image">
+</div>
+
+<div id="guess-ui">
+    Make:
+    <select id="make-list"></select>
+    <button class="disabled" id="guess-btn">Guess!</button>
 </div>
 
 <div>
-    <span>Font:</span>
-    <select id="font">
-        <option>Arial</option>
-        <option>Verdana</option>
-        <option>Times New Roman</option>
-        <option>Comic Sans MS</option>
-    </select>
+    <p>Correct guesses: <span id="correct">0</span></p>
+    <p>Total guesses: <span id="total">0</span></p>
 </div>
 
-<div>
-    <span>Position:</span>
-    <input type="radio" name="pos" value="seq" checked> Sequential
-    <input type="radio" name="pos" value="rand"> Random
-    <input type="radio" name="pos" value="rev"> Reverse
-</div>
+<!-- <footer>
+    <p>&copy; 2023 Vintage Cars. All rights reserved.</p>
+</footer> -->
 
-<div>
-    Color:
-    <select id="color">
-        <option>black</option>
-        <option>red</option>
-        <option>blue</option>
-        <option>green</option>
-    </select>
 
-    Font Size:
-    <input id="size" type="number" value="16">
-</div>
-
-<button id="blend" style="background-color: chartreuse;" >Blend Now</button>
-
-<div id="output"></div>
 
 </body>
 </html>
